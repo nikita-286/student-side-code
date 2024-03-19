@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGO Student Management System</title>
+<link rel="stylesheet" href="match.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Smart Matching Feature -->
+        <div class="smart-matching">
+            <h2>Smart Matching Feature</h2>
+            <div class="filters">
+                <h3>Student Preferences:</h3>
+                <label for="examFilter">Exam:</label>
+                <select id="examFilter">
+                    <option value="All">All</option>
+                    <option value="CET">CET</option>
+                    <option value="JEE">JEE</option>
+                    <option value="GATE">GATE</option>
+                    <option value="UPSC">UPSC</option>
+                    <option value="NEET">NEET</option>
+                    <option value="CAT">CAT</option>
+                    <!-- Add more exam options -->
+                </select>
+                <label for="locationFilter">Location:</label>
+                <select id="locationFilter">
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Nagpur">Nagpur</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Indore">Indore</option>
+                    <!-- Add more locations as needed -->
+                </select>
+                
+
+                <h3>Institute Criteria:</h3>
+                <label for="ratingFilter">Minimum Rating:</label>
+                <select id="ratingFilter">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+               
+                <!-- Add more filters as needed -->
+            </div>
+            <div id="results" class="results"></div>
+            <button id="mapButton">Show Map</button> <!-- Button to open map with filtered results -->
+        </div>
+    </div>
+    <script src="match.js"></script>
+</body>
+</html>

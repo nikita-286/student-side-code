@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGO Student Management System - Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    #map {
+        height: 100vh; /* Full height of the viewport */
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const examFilter = urlParams.get('exam');
+
+        // Sample data for markers (replace with actual data or use AJAX to fetch data)
+        const institutes = [
+            { name: 'Institute A', exam: 'CET', location: [19.0760, 72.8777] },
+            { name: 'Institute B', exam: 'JEE', location: [28.7041, 77.1025] },
+            { name: 'Institute C', exam: 'GATE', location: [18.5204, 73.8567] },
+            // Add more institutes as needed
+        ];
+
+        // Initialize the map with India coordinates
+        const map = L.map('map').setView([20.5937, 78.9629], 5); // India center and zoom level
+
+        // Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Function to add markers to the map based on the exam filter
+        function addMarkers() {
+            institutes.forEach(institute => {
+                if (examFilter === 'All' || institute.exam === examFilter) {
+                    const marker = L.marker(institute.location).addTo(map);
+                    marker.bindPopup(`<strong>${institute.name}</strong><br>${institute.exam}`);
+                }
+            });
+        }
+
+        // Call addMarkers function to display markers
+        addMarkers();
+    });
+</script>
+</body>
+</html>
