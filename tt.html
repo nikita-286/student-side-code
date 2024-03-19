@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Timetable Generator</title>
+<link rel="stylesheet" href="tt.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Study Timetable Generator</h1>
+        <label for="exam">Select Exam:</label>
+        <select id="exam">
+            <option value="CET">CET</option>
+            <option value="JEE">JEE</option>
+            <option value="GATE">GATE</option>
+            <option value="UPSC">UPSC</option>
+            <option value="NEET">NEET</option>
+        </select>
+
+        <div id="subjectList"></div>
+
+        <label for="startTime">Study Start Time:</label>
+        <input type="time" id="startTime" name="startTime">
+
+        <label for="endTime">Study End Time:</label>
+        <input type="time" id="endTime" name="endTime">
+
+        <button id="generateTimetableBtn">Generate Timetable</button>
+
+        <div id="timetableResults"></div>
+    </div>
+
+    <script src="tt.js"></script>
+</body>
+</html>
