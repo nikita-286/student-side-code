@@ -1,0 +1,101 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.details-box {
+    display: none;
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.personal-details p {
+    margin: 5px 0;
+}
+
+#toggleDetailsButton {
+    margin: 10px auto;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleDetailsButton:hover {
+    background-color: #0056b3;
+}
+
+.select-exam {
+    margin-top: 20px;
+}
+
+#examSelect {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.progress-report {
+    margin-top: 20px;
+}
+
+.subject-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.subject-list li {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Styles for the progress report table */
+.progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.progress-table th,
+.progress-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.progress-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Animation for the icon */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.icon {
+    display: inline-block;
+    font-size: 40px;
+    color: #007bff;
+    animation: bounce 1s infinite;
+}

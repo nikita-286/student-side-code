@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student User Page</title>
+<link rel="stylesheet" href="student.css">
+<style>
+    /* Animation for the icon */
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+    .icon {
+        display: inline-block;
+        font-size: 40px;
+        color: #007bff;
+        animation: bounce 1s infinite;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="icon">🚀</i> Welcome, John Doe</h1>
+        <button id="toggleDetailsButton">User Details</button>
+        <div id="detailsBox" class="details-box">
+            <h2>Personal Details</h2>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Phone Number:</strong> +1234567890</p>
+            <p><strong>Date of Birth:</strong> 01/01/2000</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Address:</strong> 123 Street, City, Country</p>
+            <p><strong>Coaching Class:</strong> XYZ Coaching Center</p>
+            <p><strong>Coaching Address:</strong> 456 Avenue, City, Country</p>
+        </div>
+
+        <!-- Select Exam Dropdown -->
+        <div class="select-exam">
+            <label for="examSelect">Select Exam:</label>
+            <select id="examSelect" onchange="showProgressReport()">
+                <option value="jee">JEE</option>
+                <option value="cet">CET</option>
+                <option value="gate">GATE</option>
+                <option value="neet">NEET</option>
+                <option value="upsc">UPSC</option>
+            </select>
+        </div>
+
+        <!-- Progress Report Section -->
+        <div id="progressReport" class="progress-report">
+            <!-- Progress report content will be dynamically generated here -->
+        </div>
+    </div>
+    <script src="student.js"></script>
+</body>
+</html>
